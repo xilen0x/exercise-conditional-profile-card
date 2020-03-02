@@ -15,25 +15,30 @@ function render(variables = {}) {
   if (variables.github == "xilen0x") variables.github = "xilen0x";
   if (variables.linkedin == null) variables.linkedin = "in/carlos-astorga/";
   if (variables.instagram == null) variables.instagram = "carlo.storga";
-
+  if (variables.socialMediaPosition == null)
+    variables.socialMediaPosition = "position-right";
+  if (variables.role == null) variables.role = "Web Developer";
+  if (variables.city == null) variables.city = "Miami, USA";
+  if (variables.country == null) variables.country = "";
   // reset the website body with the new html output
   document.querySelector("#widget_content").innerHTML = `<div class="widget">
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name} ${variables.lastname}</h1>
-          <h2>Web Developer</h2>
-          <h3>Miami, USA</h3>
-          <ul class="position-right">
+          <h2>${variables.role}</h2>
+          <h3>${variables.city}</h3>
+          <h3>${variables.country}</h3>
+          <ul class=${variables.socialMediaPosition}>
             <li><a target="_blank" href="https://twitter.com/${
               variables.twitter
             }"><i class="fa fa-twitter"></i></a></li>
-            <li><a href="https://github.com/${
+            <li><a target="_blank"href="https://github.com/${
               variables.github
             }"><i class="fa fa-github"></i></a></li>
-            <li><a href="https://linkedin.com/${
+            <li><a target="_blank"href="https://linkedin.com/${
               variables.linkedin
             }"><i class="fa fa-linkedin"></i></a></li>
-            <li><a href="https://instagram.com/${
+            <li><a target="_blank"href="https://instagram.com/${
               variables.instagram
             }"><i class="fa fa-instagram"></i></a></li>
           </ul>
@@ -49,11 +54,12 @@ window.onload = function() {
     // if includeCover is true the algorithm should
     includeCover: true,
     // this is the url of the image that will used as background for the profile cover
-    background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da",
+    background:
+      "https://images.unsplash.com/photo-1583132899463-28ba57170fdc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
     // this is the url for the profile avatar
     avatarURL: "https://randomuser.me/api/portraits/women/42.jpg",
     // social media bar position (left or right)
-    socialMediaPosition: "left",
+    socialMediaPosition: "right",
     // social media usernames
     twitter: null,
     github: "xilen0x",
