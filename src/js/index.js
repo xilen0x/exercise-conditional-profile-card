@@ -12,7 +12,7 @@ function render(variables = {}) {
   if (variables.name == null) variables.name = "Nombre";
   if (variables.lastname == null) variables.lastname = "Apellido";
   if (variables.twitter == null) variables.twitter = "xilenox";
-  if (variables.github == "xilen0x") variables.github = "xilen0x";
+  if (variables.github == null) variables.github = "xilen0x";
   if (variables.linkedin == null) variables.linkedin = "in/carlos-astorga/";
   if (variables.instagram == null) variables.instagram = "carlo.storga";
   if (variables.socialMediaPosition == null)
@@ -62,7 +62,7 @@ window.onload = function() {
     socialMediaPosition: "right",
     // social media usernames
     twitter: null,
-    github: "xilen0x",
+    github: null,
     linkedin: null,
     instagram: null,
     name: null,
